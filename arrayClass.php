@@ -4,6 +4,22 @@
  * Class ArrayTools
  */
 class ArrayTools{
+
+    /***
+     * @desc:   搜索二维数组中是否存在某个值
+     * @param $array
+     * @param $str
+     * @return bool
+     */
+    public function arrayCheck($array,$str)
+    {
+            $arrayList = array_column($str, $array);
+            if (!in_array($array,$arrayList)) {
+                return false;
+            }
+            return true;
+    }
+
     /**
      * @desc： 二维数组去掉重复值
      * @param array $array2D
